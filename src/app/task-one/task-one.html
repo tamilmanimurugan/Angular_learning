@@ -1,0 +1,21 @@
+<div class="container">
+  <!-- Interpolation -->
+  <h1>Hello {{ name }}</h1>
+
+  <!-- Property Binding -->
+  <img [src]="imageUrl" width="150">
+  <br>
+  <button (click)="showMessage()">Click Me</button>
+  <br>
+  <p>{{ message }}</p>
+
+  <!-- Event Binding -->
+  <button (click)="showMessage1()">user name</button>
+
+  <div>
+    <h3>Count: {{ count }}</h3>
+    <button (click)="increase()">+</button>
+    <button (click)="decrease()">-</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>

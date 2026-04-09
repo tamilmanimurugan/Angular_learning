@@ -1,0 +1,31 @@
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  text-align: center;
+  align-items: center;
+  background-color: #3ee6d8;
+  width: 350px;
+  margin: 20px auto;   
+  margin-top: 100px; 
+}
+
+img {
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(229, 237, 240);
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
