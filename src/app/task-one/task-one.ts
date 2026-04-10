@@ -12,6 +12,7 @@ export class TaskOne {
   name: string = "Tamil";     // Interpolation data
   imageUrl: string = "images/Layer1.png";   // Property binding 
   count: number = 0;       //  Count variable
+  
   showMessage() {
     this.message = "Hello " + this.name + "!";
   }
