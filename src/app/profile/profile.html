@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Angular Control Flow Demo</h1>
+
+  <!-- IF ELSE -->
+  <section class="card">
+    <h2>IF ELSE</h2>
+
+    @if (isPositive) {
+    <p class="success">Condition is TRUE</p>
+    }
+    @else if (isChecked) {
+    <p class="warning">Condition is CHECKED</p>
+    }
+    @else {
+    <p class="danger">Condition is FALSE</p>
+    }
+    <button (click)="isPositive = !isPositive">
+      Toggle
+    </button>
+  </section>
+
+  <!-- STRING ARRAY -->
+  <section class="card">
+    <h2>String Array Loop</h2>
+    @for (name of names; track name; let i = $index) {
+    <div class="item">{{i}} - {{name}}</div>
+    }
+  </section>
+
+  <!-- NUMBER ARRAY -->
+  <section class="card">
+    <h2>Number Array Loop</h2>
+    @for (num of numbers; track num; let i = $index) {
+    <div class="item">{{i}} - {{num}}</div>
+    }
+  </section>
+
+  <!-- OBJECT ARRAY -->
+  <section class="card">
+    <h2>Object Array Loop</h2>
+    @for (user of users; track user.id; let i = $index) {
+    <div class="item">
+      {{i}} - {{user.name}} - {{user.email}}
+    </div>
+    }
+  </section>
+
+  <!-- OBJECT LOOP -->
+  <section class="card">
+    <div class="item">
+      <h2>Object Loop</h2>
+      @for (item of userObj | keyvalue; track item.key) {
+      <p>{{item.key}} : {{item.value}}</p>
+      }
+    </div>
+  </section>
+</div>
