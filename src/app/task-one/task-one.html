@@ -1,4 +1,4 @@
-<div class="container">
+<div class="user-card">
   <!-- Interpolation -->
   <h1>Hello {{ name }}</h1>
 
@@ -12,10 +12,11 @@
   <!-- Event Binding -->
   <button (click)="showMessage1()">user name</button>
 
-  <div>
-    <h3>Count: {{ count }}</h3>
-    <button (click)="increase()">+</button>
-    <button (click)="decrease()">-</button>
-    <button (click)="reset()">Reset</button>
-  </div>
+   <div>
+  <h3>Count: {{ count }}</h3>
+
+  <button class="btn btn-primary" (click)="increase()">+</button>
+  <button class="btn btn-secondary" (click)="decrease()">-</button>
+  <button class="btn btn-danger" (click)="reset()">Reset</button>
 </div>
+  </div>

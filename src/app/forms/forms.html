@@ -1,0 +1,59 @@
+<div class="forms-page">
+
+  <!--  Reactive Form -->
+  <div class="card">
+    <h2>Reactive Form</h2>
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+      <div class="input-group">
+        <input type="text" formControlName="username" placeholder="Username">
+      </div>
+
+      <div class="error" *ngIf="f.form.get('username')?.invalid && f.form.get('username')?.touched">
+        Username is required
+      </div>
+
+      <div class="input-group">
+        <input type="password" formControlName="password" placeholder="Password">
+      </div>
+
+      <div class="error" *ngIf="f.form.get('password')?.invalid && f.form.get('password')?.touched">
+        Password is required
+      </div>
+
+      <button type="submit">Reactive Login</button>
+
+    </form>
+  </div>
+
+  <hr>
+
+  <!--  Template-driven Form -->
+  <div class="card">
+    <h2>Template Form</h2>
+
+    <form #f="ngForm" (ngSubmit)="onTemplateSubmit(f)">
+
+      <div class="input-group">
+        <input type="text" name="username" ngModel required placeholder="Username">
+      </div>
+
+       <div class="error" *ngIf="f.form.get('username')?.invalid && f.form.get('username')?.touched">
+        Username is required
+      </div>
+
+      <div class="input-group">
+        <input type="password" name="password" ngModel required placeholder="Password">
+      </div>
+
+      <div class="error" *ngIf="f.form.get('password')?.invalid && f.form.get('password')?.touched">
+        Password is required
+      </div>
+
+      <button type="submit">Template Login</button>
+
+    </form>
+  </div>
+
+</div>

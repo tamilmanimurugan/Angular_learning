@@ -1,35 +1,31 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './profile.html',
   styleUrls: ['./profile.scss']
 })
 export class Profile {
-  // IF condition variable
-  isPositive: boolean = true;
-  isChecked: boolean = false;
-  // String array ,for of loop
-  names: string[] = ['Ram', 'Sam', 'Ravi'];
+  isPositive = true;
+  isChecked = false;
 
-  // Number array
-  numbers: number[] = [1, 2, 3, 4];
+  names = ['Ram', 'Sam', 'Ravi'];
+  numbers = [1, 2, 3, 4];
 
-  // Object array
   users = [
     { id: 1, name: 'Tamil', email: 'tamil@gmail.com' },
     { id: 2, name: 'Arun', email: 'arun@gmail.com' },
     { id: 3, name: 'Kumar', email: 'kumar@gmail.com' }
   ];
 
-  // for in Object loop
   userObj: any = {
     Name: 'Tamilmani',
     Age: 22,
     city: 'Chennai'
   };
-
 }

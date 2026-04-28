@@ -1,19 +1,9 @@
-.container {
-    width: 90%;
+.card {
     margin: 20px auto;
     font-family: Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.container h1 {
-    text-align: center;
-    width: 100%;
-    color: #497dec;
-}
-
-.card {
     flex: 30%;
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -56,6 +46,8 @@ button {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    gap: 10px;
+  
 }
 
 button:hover {

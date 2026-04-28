@@ -1,12 +1,12 @@
-.container {
-  width: 350px;
-  margin: 100px auto 20px auto;
+.user-card {
+  width: 100%;
   padding: 20px;
   background-color: #3ee6d8;
   border-radius: 10px;
-  box-shadow: 0 0 10px gray;
+    border: 1px solid #000000;
   text-align: center;
   align-items: center;
+
 }
 
 img {
@@ -26,4 +26,15 @@ button {
 button:hover {
   background-color: blue;
   color: white;
+}
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color:   #e0b91a;
+}
+
+.btn-danger {
+  background-color: #dc3545;
 }

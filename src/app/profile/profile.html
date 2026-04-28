@@ -1,4 +1,4 @@
-<div class="container">
+<div class="layout">
   <h1>Angular Control Flow Demo</h1>
 
   <!-- IF ELSE -->
@@ -6,14 +6,15 @@
     <h2>IF ELSE</h2>
 
     @if (isPositive) {
-    <p class="success">Condition is TRUE</p>
+      <p class="success">Condition is TRUE</p>
     }
     @else if (isChecked) {
-    <p class="warning">Condition is CHECKED</p>
+      <p class="warning">Condition is CHECKED</p>
     }
     @else {
-    <p class="danger">Condition is FALSE</p>
+      <p class="danger">Condition is FALSE</p>
     }
+
     <button (click)="isPositive = !isPositive">
       Toggle
     </button>
@@ -23,7 +24,7 @@
   <section class="card">
     <h2>String Array Loop</h2>
     @for (name of names; track name; let i = $index) {
-    <div class="item">{{i}} - {{name}}</div>
+      <div class="item">{{i}} - {{name}}</div>
     }
   </section>
 
@@ -31,7 +32,7 @@
   <section class="card">
     <h2>Number Array Loop</h2>
     @for (num of numbers; track num; let i = $index) {
-    <div class="item">{{i}} - {{num}}</div>
+      <div class="item">{{i}} - {{num}}</div>
     }
   </section>
 
@@ -39,19 +40,26 @@
   <section class="card">
     <h2>Object Array Loop</h2>
     @for (user of users; track user.id; let i = $index) {
-    <div class="item">
-      {{i}} - {{user.name}} - {{user.email}}
-    </div>
+      <div class="item">
+        {{i}} - {{user.name}} - {{user.email}}
+      </div>
     }
   </section>
 
   <!-- OBJECT LOOP -->
   <section class="card">
-    <div class="item">
-      <h2>Object Loop</h2>
-      @for (item of userObj | keyvalue; track item.key) {
-      <p>{{item.key}} : {{item.value}}</p>
-      }
-    </div>
-  </section>
+  <h2>Object Loop</h2>
+
+  @for (item of userObj | keyvalue; track item.key) {
+    <p>{{item.key}} : {{item.value}}</p>
+  }
+
+  <div style="margin-top:10px; gap: 10px; display: flex;">
+    <button routerLink="details">Details</button>
+    <button routerLink="settings">Settings</button>
+  </div>
+
+  <hr>
+  <router-outlet></router-outlet>
+</section>
 </div>

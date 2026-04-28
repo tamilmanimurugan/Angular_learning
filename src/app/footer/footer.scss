@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+.footer {
+    height: 60px;
+    background: #ddd;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(10, 10, 10);
+    font-size: 40px;
+}
+.footer p {
+    margin: 0;
+    font-weight: bold;
+}
