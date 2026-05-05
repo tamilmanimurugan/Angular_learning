@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class Forms {
 
-  // 🔴 Reactive Form
+  // Reactive Form
   myForm = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
@@ -21,19 +21,19 @@ export class Forms {
   onSubmit() {
     if (this.myForm.valid) {
       console.log("Reactive Login:", this.myForm.value);
-      alert("Reactive Login Success ✅");
+      alert("Reactive Login Success");
     } else {
-      alert("Reactive Form Invalid ❌");
+      alert("Reactive Form Invalid");
     }
   }
 
-  // 🟢 Template Form
+  // Template Form
   onTemplateSubmit(form: any) {
     if (form.valid) {
       console.log("Template Login:", form.value);
-      alert("Template Login Success ✅");
+      alert("Template Login Success");
     } else {
-      alert("Template Form Invalid ❌");
+      alert("Template Form Invalid");
     }
   }
 }
